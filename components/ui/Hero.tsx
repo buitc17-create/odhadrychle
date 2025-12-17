@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  onCtaClick?: () => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
   return (
     <section>
       <h1>Hero Section</h1>
+      <button onClick={onCtaClick}>CTA</button>
     </section>
   );
 };
